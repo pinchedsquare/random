@@ -1,0 +1,11 @@
+# Temp files and dirs.
+myenv/
+.ipynb_checkpoints
+output.ipynb_checkpoints
+
+# Log files
+cronlog.log
+
+# Credential files
+client_secret_*.json
+toke.json
