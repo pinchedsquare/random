@@ -8,4 +8,4 @@ cronlog.log
 
 # Credential files
 client_secret_*.json
-toke.json
+token.json
