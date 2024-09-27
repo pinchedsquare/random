@@ -2,9 +2,11 @@
 myenv/
 .ipynb_checkpoints
 output.ipynb_checkpoints
+dates_df.csv
 
 # Log files
 cronlog.log
+exec.log 
 
 # Credential files
 client_secret_*.json

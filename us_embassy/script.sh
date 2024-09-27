@@ -1,5 +1,10 @@
-echo "Job started at: $(date)" >> echo "Job started at: $(date)" >> /Users/alirezaali/workspace/random/us_embassy/cronlog.log
+#!/bin/zsh
+working_dir=/Users/alirezaali/workspace/random/us_embassy/
+
+echo "Job started at: $(date)" >> $working_dir/cronlog.log
+source "/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh"
 conda activate us_embassy
-source /Users/alirezaali/workspace/random/us_embassy/myenv/bin/activate
-papermill --cwd /Users/alirezaali/workspace/random/us_embassy /Users/alirezaali/workspace/random/us_embassy/US_Visa.ipynb /Users/alirezaali/workspace/random/us_embassy/output.ipynb
-echo "Job finished at: $(date)" >> echo "Job finished at: $(date)" >> /Users/alirezaali/workspace/random/us_embassy/cronlog.log
+# source $working_dir/myenv/bin/activate
+papermill --cwd $working_dir $working_dir/US_Visa.ipynb $working_dir/output.ipynb
+python $working_dir/log_dates.py
+echo "Job finished at: $(date)" >> $working_dir/cronlog.log
